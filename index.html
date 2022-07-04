@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        :root{
+            --left: 190px;
+            --bottom: 58.30px;
+        }
+        /*Interatividade entre botões*/
+
+        div.menu-main:hover > .a1{
+            display: block;
+            transition-duration: .4s;
+        }
+
+        .a6:hover ~ .a6a{
+            display: block;
+            transition-duration: .4s;
+
+            position: relative;
+            bottom: var(--bottom);
+            left: var(--left);
+        }
+        /*Sobreposição por botão*/
+
+        .menu-main > h3:hover{
+            background-color: #2F3461;
+        }
+
+        div.menu-main > .a1:hover{
+            display: block;
+            background-color: #2F3461;
+        }
+
+        div.menu-main > .a6:hover{
+            display: block;
+            background-color: #7e251f;
+        }
+        div.menu-main > .a6a:hover{
+            display: block;
+        }
+        .a6a:hover > .a6b{
+            position: relative;
+            bottom: var(--bottom);
+            left: var(--left);
+        }
+        .a6a > .a6b:hover{
+            display: block;
+            background-color: #1f7e35;
+            
+            transition-duration: .4s;
+
+            position: relative;
+            bottom: var(--bottom);
+            left: var(--left);
+        }
+        /*Desativação*/
+
+        div.menu-main > .a1, div.menu-main > .a6, div.menu-main > .a6a{
+            display: none;
+        }
+        .menu-style{
+            width: 150px;
+            display: block;
+            background-color: #2B39E0;
+            padding: 20px;
+            box-shadow: inset -1px 0px 5px 1px black;
+            color: white;
+            text-align: center;
+        }
+        .sub-menu-style{
+            width: 150px;
+            display: block;
+            background-color: #2B39E0;
+            padding: 20px;
+            box-shadow: inset -1px 0px 5px 1px black;
+            color: white;
+            text-align: center;
+        }
+        .menu-main{
+            display: inline-block;
+        }
+        section#section1{
+            padding: 30px;
+        }
+        #section1 > h1{
+            text-align: center;
+        }
+        #menu-position{
+            margin: auto;
+            padding-top: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section id="section1">
+        <h1>Teste de Menu</h1>
+        <div id="menu-position">
+            <div class="menu-main">
+                <h3 class="menu-style">MENU</h3>
+                <a href="pag/a1.html" target="_self" rel="next" class="menu-style a1">A1</a>
+                <a href="pag/a2.html" target="_self" rel="next" class="menu-style a1">A2</a>
+                <a href="pag/a3.html" target="_self" rel="next" class="menu-style a1">A3</a>
+                <a href="pag/a4.html" target="_self" rel="next" class="menu-style a1">A4</a>
+                <a href="pag/a5.html" target="_self" rel="next" class="menu-style a1">A5</a>
+                <p class="menu-style a6 a1">A6</p>
+                <div class="a6a">
+                    <a href="pag/sub-pag/a7.html" target="_self" rel="next" class="sub-menu-style a6b">a7</a>
+                    <a href="pag/sub-pag/a8.html" target="_self" rel="next" class="sub-menu-style a6b">a8</a>
+                    <a href="pag/sub-pag/a9.html" target="_self" rel="next" class="sub-menu-style a6b">a9</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
